@@ -1,5 +1,10 @@
 .menu{
        margin-right: 15px;
        text-decoration: none;
-       
+}
+
+#logo{
+  width: 20px;
+  height: 20%;
+  margin-right: 10px;
 }
