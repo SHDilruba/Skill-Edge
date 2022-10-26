@@ -1,0 +1,32 @@
+.card{
+  width: 25%;
+  height: 380px;
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid blue;
+ box-shadow: 1px 1px 1px 1px rgb(169, 162, 162);
+ color: rgb(202, 44, 44);
+}
+
+.cover{
+  display: flex;
+  align-items: center;
+  justify-content: space-around ;
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+@media screen and (max-width: 900px) {
+  .cover{
+    flex-direction: column;
+  } 
+  .card{
+    width: 90%;
+    margin-top: 50px;
+    height: 240px;
+    padding-top: 50px;
+  } 
+  .cover img{
+    width: 90%;
+  }   
+}
