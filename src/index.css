@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.dark-theme{
+  background-color: black;
+  color: white;
+  height: 60vw;
+}
+.light-theme{
+   background-color: gainsboro;
+   height: 60vw;
+
+}
+
+.theme-btn{
+  margin-left: 80%;
+}
+
+@media screen and (max-width: 900px) {
+  .theme-btn{
+    margin-left: 60%;
+  } 
+}

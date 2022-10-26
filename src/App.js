@@ -7,7 +7,6 @@ import Courses from './components/Courses/Courses';
 import Course from './components/Course/Course';
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: '/',
@@ -35,7 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      <RouterProvider router={router}></RouterProvider>    
+      
+      <RouterProvider router={router}></RouterProvider>  
     </div>
   );
 }
