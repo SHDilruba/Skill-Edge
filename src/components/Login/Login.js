@@ -1,11 +1,13 @@
 import app from '../../firebase/firebase.config';
-import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword  } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 const auth = getAuth(app);
 
 const Login = () => {
+  const [user,setUser] = useState({});
+  const provider = new GoogleAuthProvider(); 
   const [success, setSuccess] = useState(false);
   const [userEmail, setUserEmail] = useState('');
 
@@ -46,9 +48,24 @@ const handleForgetPassword = () =>{
        console.error(error);
     })
 }
+
+  const handleGoogleSignIn = () =>{
+     signInWithPopup(auth, provider)
+     .then(result => {
+      const user = result.user; 
+      setUser(user);
+       console.log(user);
+     })
+     .catch(error => {
+      console.error('error', error)
+     })
+     }
+
   return (
+   <div>      
+ <button onClick={handleGoogleSignIn}>Google Sign In</button> 
     <div className='container mt-5 w-50 pb-5'>
-      <h3 className='text-primary'> Login with Email</h3>
+      <h3 className='text-primary'> Log in with Email</h3>
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">Email</label>
@@ -63,6 +80,7 @@ const handleForgetPassword = () =>{
         {success && <p>Succesfully login to the account</p>}
         <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         <p><small>Forget password? <button onClick={handleForgetPassword} type="button" className="btn btn-link">Reset Password</button></small> </p>
+    </div>
     </div>
   );
 };

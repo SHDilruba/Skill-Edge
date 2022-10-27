@@ -25,7 +25,7 @@
             <NavLink className="menu" to="/faq">FAQ</NavLink>
             </Nav>
             <Nav>
-            <NavLink className="menu fs-4" to='/login'> Login</NavLink>
+            <NavLink className="menu fs-4" to='/login'>Login</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
  const auth = getAuth(app); 
 
 const Register = () => { 
-
     const [passwordError, setPasswordError] = useState('');
      const [success, setSuccess] = useState(false);
 
