@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Courses from './components/Courses/Courses';
 import Course from './components/Course/Course';
 import Blog from './components/Blog/Blog';
+import Login from './components/Login/Login';
 
 function App() {
   const router = createBrowserRouter([
@@ -39,6 +40,14 @@ function App() {
              return fetch('blog.json')
           },
           element: <Blog></Blog>
+        },
+        {
+          path: '/login',
+          element: <Login></Login>
+        },
+        {
+          path: '/register',
+          element: <div></div>
         }
       ]
     }

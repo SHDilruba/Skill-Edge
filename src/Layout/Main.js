@@ -9,6 +9,7 @@ const Main = () => {
   const [darkTheme, setDarkTheme] = useState(false);
 
   return (
+    <div>
     <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
        <div className='header'>
           < ColorSchemesExample> </ColorSchemesExample>
@@ -16,6 +17,7 @@ const Main = () => {
        </div>
        <Outlet></Outlet>
        <Footer></Footer>
+    </div>
     </div>
   );
 };
