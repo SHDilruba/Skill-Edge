@@ -10,7 +10,7 @@
 
     return (
       <div>
-      <Navbar className='py-3' collapseOnSelect expand="lg" bg="light"  variant="light">
+      <Navbar className='py-1 cover-area' collapseOnSelect expand="lg" bg="light"  variant="light">
         <Container>
           <div>
           <img id='logo' src={logo} alt="" />

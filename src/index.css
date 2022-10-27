@@ -13,13 +13,12 @@ code {
 }
 
 .dark-theme{
-  background-color: black;
-  color: white;
-  height: 60vw;
+  background-color: rgb(27, 17, 17);
+  height: 100%;
 }
 .light-theme{
-   background-color: gainsboro;
-   height: 60vw;
+   background-color: rgb(227, 228, 202);
+   height: 100%;
 
 }
 

@@ -1,0 +1,19 @@
+.box{
+  border: 2px solid rgb(148, 22, 22);
+  border-radius: 15px;
+  padding: 34px;
+  height: 360px;
+  background-color: rgb(228, 220, 220) ;
+}
+.card-title{
+     color: rgb(148, 22, 22);
+     text-align: center;
+     padding: 20px 15px 15px 15px;
+}
+
+@media screen and (max-width: 902px){
+  .box{
+    width: 100%;
+    height: auto;
+  } 
+}

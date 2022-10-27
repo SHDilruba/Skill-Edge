@@ -2,7 +2,13 @@ import React from 'react';
 
 const Courses = () => {
   return (
-    <div>
+    <div className=''>
+      <div className='courses-container'>
+
+      </div>
+       <div className='courses-sidebar'>
+
+       </div>
       
     </div>
   );
