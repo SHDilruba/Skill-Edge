@@ -70,7 +70,12 @@ const updateUserName = (name) =>{
 
       <Form.Group className="mb-3" controlId="formBasicName">
         <Form.Label>Your Full Name</Form.Label>
-        <Form.Control type="text" name="name" placeholder="Enter your full Name"/>
+        <Form.Control type="text" name="name" placeholder="Enter your full Name"/>   
+      </Form.Group>
+
+      <Form.Group className="mb-3" controlId="formBasicImage">
+        <Form.Label>Image url</Form.Label>
+        <Form.Control type="url" name="img" placeholder="Enter your image url"/>
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">

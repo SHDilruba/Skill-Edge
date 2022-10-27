@@ -1,13 +1,16 @@
 import app from '../../firebase/firebase.config';
-import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, GithubAuthProvider } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
 const auth = getAuth(app);
 
 const Login = () => {
-  const [user,setUser] = useState({});
   const provider = new GoogleAuthProvider(); 
+  const githubProvider = new GithubAuthProvider();
+  const googleProvider = new GoogleAuthProvider();
+
+  const [user, setUser] = useState({});
   const [success, setSuccess] = useState(false);
   const [userEmail, setUserEmail] = useState('');
 
@@ -61,9 +64,24 @@ const handleForgetPassword = () =>{
      })
      }
 
+ const handleGithubSignIn = () =>{
+    signInWithPopup(auth, googleProvider)
+    .then(result => {
+        const user = result.user;
+        setUser(user);
+        console.log(user);
+      })
+      .catch(error => {
+        console.log('error', error)
+       })
+     }
+
   return (
    <div>      
- <button onClick={handleGoogleSignIn}>Google Sign In</button> 
+        <div>
+             <button onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
+             <button onClick={handleGithubSignIn}> Log In with Github</button> 
+        </div>         
     <div className='container mt-5 w-50 pb-5'>
       <h3 className='text-primary'> Log in with Email</h3>
           <form onSubmit={handleSubmit}>
@@ -77,11 +95,11 @@ const handleForgetPassword = () =>{
             </div>
             <button className="btn btn-primary w-25 mb-5" type="submit">Login</button>
         </form>
-        {success && <p>Succesfully login to the account</p>}
+        {success && <p>Succesfully loged in to the account</p>}
         <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         <p><small>Forget password? <button onClick={handleForgetPassword} type="button" className="btn btn-link">Reset Password</button></small> </p>
     </div>
-    </div>
+  </div>
   );
 };
 
