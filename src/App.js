@@ -7,6 +7,7 @@ import Courses from './components/Courses/Courses';
 import Course from './components/Course/Course';
 import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
+import Register from './components/Register/Register';
 
 function App() {
   const router = createBrowserRouter([
@@ -47,8 +48,8 @@ function App() {
         },
         {
           path: '/register',
-          element: <div></div>
-        }
+          element: <Register></Register>
+        },
       ]
     }
   ])

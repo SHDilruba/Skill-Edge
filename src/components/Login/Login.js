@@ -3,7 +3,6 @@ import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword  } from 'fi
 import { Link } from 'react-router-dom';
 import React, { useState } from 'react';
 
-
 const auth = getAuth(app);
 
 const Login = () => {
@@ -49,7 +48,7 @@ const handleForgetPassword = () =>{
 }
   return (
     <div className='container mt-5 w-50 pb-5'>
-      <h3 className='text-success'> Login with Email</h3>
+      <h3 className='text-primary'> Login with Email</h3>
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">Email</label>
