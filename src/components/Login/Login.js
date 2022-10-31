@@ -77,11 +77,7 @@ const handleForgetPassword = () =>{
      }
 
   return (
-   <div>      
-        <div>
-             <button onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
-             <button onClick={handleGithubSignIn}> Log In with Github</button> 
-        </div>         
+    <div className='container'>             
     <div className='container mt-5 w-50 pb-5'>
       <h3 className='text-primary'> Log in with Email</h3>
           <form onSubmit={handleSubmit}>
@@ -93,8 +89,12 @@ const handleForgetPassword = () =>{
                 <label htmlFor="formGroupExampleInput2" className="form-label">Password</label>
                 <input type="password" name="password" className="form-control" id="formGroupExampleInput2" placeholder="Your password" required />
             </div>
-            <button className="btn btn-primary w-25 mb-5" type="submit">Login</button>
-        </form>
+            <button className="btn btn-primary w-25" type="submit">Login</button>
+        </form> 
+          <div className='mt-5'>
+              <button className='w-50 py-2 btn btn-dark' onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
+              <button className='w-50 py-2 btn btn-dark mb-5' onClick={handleGithubSignIn}> Log In with Github</button> 
+        </div>
         {success && <p>Succesfully loged in to the account</p>}
         <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         <p><small>Forget password? <button onClick={handleForgetPassword} type="button" className="btn btn-link">Reset Password</button></small> </p>

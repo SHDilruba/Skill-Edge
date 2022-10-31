@@ -6,7 +6,7 @@
  import { NavLink } from 'react-router-dom';
  import logo from '../../images/logo (3).svg'
   
-  function CollapsibleExample() {
+  function Header() {
 
     return (
       <div>
@@ -34,4 +34,4 @@
     );
   }
   
-  export default CollapsibleExample;
+  export default Header;

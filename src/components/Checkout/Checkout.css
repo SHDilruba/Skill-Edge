@@ -1,0 +1,16 @@
+.card-checkout{
+  height: 300px;
+  width: 600px;
+  margin-bottom: 300px;
+  margin-top: 80px;
+}
+.checkout-card{
+   height: 400px;
+   width: 300px;
+}
+
+@media screen and (max-width: 902px){
+  .card-checkout{
+    width: 98%;
+  } 
+}

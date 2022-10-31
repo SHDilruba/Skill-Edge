@@ -1,0 +1,44 @@
+.courses-container{
+     display: grid;
+     grid-template-columns: 3fr 9fr;
+     gap: 60px;
+     margin-bottom: 100px;
+}
+.sidebar button{
+  width: 100%;
+  border: 2px solid blue;
+  border-radius: 15px;
+  color: rgb(148, 22, 22);
+}
+.courses{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.card h3{
+  text-decoration: none;
+  color: rgb(148, 22, 22);
+}
+
+.courses img{
+   width: 100%;
+   height: 60%;
+}
+
+@media screen and (max-width: 902px){
+  .courses-container{
+    grid-template-columns: 1fr;
+    width: 80%;
+    gap: 0px;
+  }
+  .sidebar button{
+    width: 100%;
+  }
+  .courses{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0px;
+  }
+}
+

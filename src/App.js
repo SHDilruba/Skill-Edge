@@ -8,6 +8,10 @@ import Course from './components/Course/Course';
 import Blog from './components/Blog/Blog';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
+import Faq from './components/Faq/Faq';
+import CourseDetail from './components/CourseDetails/CourseDetail';
+import Sidebar from './components/Sidebar/Sidebar';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   const router = createBrowserRouter([
@@ -25,20 +29,43 @@ function App() {
         },
         {
           path: '/courses',
-          loader: () => fetch('http://localhost:5000/courses'),
+          loader: async() =>{
+            return  fetch('http://localhost:5000/courses')
+          },
           element: <Courses></Courses>
         },
         {
-          path: '/courses/:id',
-          loader: async({params}) =>{
-            return fetch(`http://localhost:5000/courses${params.id}`)
+          path: '/course',
+          loader: async() =>{
+            return fetch('http://localhost:5000/courses')
           },
           element: <Course></Course>
         },
         {
+          path: '/course',
+          loader: async({params}) =>{
+            return fetch(`http://localhost:5000/courses/${params.courseId}`)
+          },
+          element: <Sidebar></Sidebar>
+        },
+        {
+          path: '/course/:courseId',
+          loader: async({params}) =>{
+            return fetch(`http://localhost:5000/courses/${params.courseId}`)
+          },
+          element: <CourseDetail></CourseDetail>
+        },
+        {
+          path: '/detail/:detailId',
+          loader: async({params}) =>{
+            return fetch(`http://localhost:5000/courses/${params.detailId}`)
+          },
+          element:  <Checkout></Checkout> 
+        },
+        {
           path: "/blog",
           loader: async()=>{
-             return fetch('blog.json')
+            return fetch('blog.json')
           },
           element: <Blog></Blog>
         },
@@ -50,6 +77,10 @@ function App() {
           path: '/register',
           element: <Register></Register>
         },
+        {
+          path: '*',
+          element: <Faq></Faq>
+        }
       ]
     }
   ])
