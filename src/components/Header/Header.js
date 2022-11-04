@@ -46,7 +46,7 @@ import Fade from 'react-bootstrap/Fade';
       </Fade> 
                </div>
               : 
-               <div className='text-primary fs-5'
+               <div className='text-primary fs-4'
                > 
                Login
                </div>

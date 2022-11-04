@@ -13,7 +13,7 @@ const Blog = () => {
 
   return (
     <div className="container">
-        <h2 className='blog text-center mt-5 pt-5 ps-3'>Blog about Technology</h2>
+        <h2 className='blog text-center mt-5 ps-3'>Blog about Technology</h2>
          <div className="post-container">
             {
                posts.map(post => <Post 

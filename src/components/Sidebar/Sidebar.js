@@ -11,10 +11,10 @@ const Sidebar = ({course}) => {
 }
 
   return (
-    <div>
+    <div className=''>
       <div>
           <Link to={`/course/${id}`}>   
-      <button onClick={handleNavigate} className='w-100 mt-4 px-3 py-3 fs-5'> {name}</button>
+      <button onClick={handleNavigate} className='w-100 mt-4 px-3 py-2 '> {name}</button>
             </Link>
          </div>
     </div>
