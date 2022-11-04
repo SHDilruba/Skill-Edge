@@ -13,8 +13,7 @@ const Main = () => {
     <div className={darkTheme ? 'dark-theme' : 'light-theme'}>
        <div className='header'>
         <Header></Header>
-          {/* < ColorSchemesExample> </ColorSchemesExample> */}
-           <NavLink><button onClick={()=> setDarkTheme(prevTheme => !prevTheme)} className='theme-btn btn btn-primary mt-3'>Dark/Light</button></NavLink>
+           <NavLink><button onClick={()=> setDarkTheme(prevTheme => !prevTheme)} className='theme-btn btn btn-primary px-3'>Dark/Light</button></NavLink>
        </div>
        <Outlet></Outlet>
        <Footer></Footer>

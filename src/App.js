@@ -1,3 +1,5 @@
+import React from 'react'
+// import ReactDOM from 'react-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -12,6 +14,8 @@ import Faq from './components/Faq/Faq';
 import CourseDetail from './components/CourseDetails/CourseDetail';
 import Sidebar from './components/Sidebar/Sidebar';
 import Checkout from './components/Checkout/Checkout';
+import PrivateRoute from './components/PrivateRoute';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -60,7 +64,7 @@ function App() {
           loader: async({params}) =>{
             return fetch(`http://localhost:5000/courses/${params.detailId}`)
           },
-          element:  <Checkout></Checkout> 
+          element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
         },
         {
           path: "/blog",

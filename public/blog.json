@@ -7,7 +7,7 @@
 {
   "id": 2,
   "name": "Why are you using firebase? What other options do you have to implement authentication?",
-  "description": " There are many useful features in Firebase such asuser authentication and a realtime database. Firebase is good for rapid backend development."
+  "description": "There are many useful features in Firebase such as user authentication and a realtime database. Firebase is good for rapid backend development. user authentication is one of the most important requirements for Android apps. It is essential to authenticate users. With Firebase authentication, we can also get good analytics and demographic information of users. However, Parse is the first Firebase alternative on my list."
  },
  {
   "id": 3,

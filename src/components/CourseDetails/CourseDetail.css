@@ -1,6 +1,10 @@
 .course-detail h1{
     color: rgb(148, 22, 22);
 }
+.title button{
+   color:  rgb(148, 22, 22) ;
+   font-weight: 500;
+}
 
 .course-detail img{
    height: 350px;

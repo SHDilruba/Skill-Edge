@@ -10,9 +10,10 @@ const Course = ({course}) => {
  }
 
   return (
-    <div onClick={handleNavigate} className='card w-100'>
+    <div className='card w-100'>
          <img src={picture} alt="" />
          <h3 className='mt-4 px-1'>{name}</h3>
+         <button onClick={handleNavigate} className='btn btn-primary my-4'>Details</button>
     </div>
   );
 };

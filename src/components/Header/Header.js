@@ -1,12 +1,18 @@
-  import React from 'react';
+  import React, { useState } from 'react';
   import './Header.css';
   import Container from 'react-bootstrap/Container';
   import Nav from 'react-bootstrap/Nav';
   import Navbar from 'react-bootstrap/Navbar';
- import { NavLink } from 'react-router-dom';
+ import { Link, NavLink } from 'react-router-dom';
  import logo from '../../images/logo (3).svg'
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { Image } from 'react-bootstrap';
+import Fade from 'react-bootstrap/Fade';
   
   function Header() {
+    const { user } = useContext(AuthContext);
+    const [open, setOpen] = useState(false);
 
     return (
       <div>
@@ -25,7 +31,27 @@
             <NavLink className="menu" to="/faq">FAQ</NavLink>
             </Nav>
             <Nav>
-            <NavLink className="menu fs-4" to='/login'>Login</NavLink>
+            <NavLink className="menu" to='/Login'>
+              { user ? 
+               <div className='d-flex mt-2'>
+                   <div className='me-2' onMouseOver={() => setOpen(!open)}
+                    aria-controls="example"
+                    aria-expanded={open}>
+                    <Image roundedCircle src={user.photoURL} style={{height:'30px' }}></Image>
+                </div>
+                <Fade in={open}>
+        <div id="example" className='mt-1'>
+            <p> {user.displayName} </p>
+        </div>
+      </Fade> 
+               </div>
+              : 
+               <div className='text-primary fs-5'
+               > 
+               Login
+               </div>
+              }
+             </NavLink>           
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -1,4 +1,6 @@
-import { Link, useLoaderData } from 'react-router-dom';
+import React from 'react'
+// import ReactDOM from 'react-dom'
+import { useLoaderData } from 'react-router-dom';
 import Course from '../Course/Course';
 import './Courses.css'
 import Sidebar from '../Sidebar/Sidebar';
