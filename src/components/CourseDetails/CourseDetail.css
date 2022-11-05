@@ -1,6 +1,11 @@
 .course-detail h1{
     color: rgb(148, 22, 22);
 }
+.title{
+   display: flex; 
+  justify-content: center;
+}
+
 .title button{
    color:  rgb(148, 22, 22) ;
    font-weight: 500;
@@ -8,8 +13,12 @@
 
 .course-detail img{
    height: 350px;
+   width: 75%;
+   margin-top: 15px;
 }
-
+.button-area{
+   margin-top: 6px;
+}
 
 @media screen and ( max-width: 902px){
   .course-detail{
@@ -21,11 +30,17 @@
      margin: 0;
      padding: 0;
   }
+  .course-detail{
+   width: 100%;
+  }
   .course-detail img{
     width: 100%;
   }
-
-
-
+ #premium-btn button{
+   width: 80%;
+}
+.title{
+   flex-direction: column;
+}
 }
   

@@ -28,7 +28,7 @@
 .card button{
   position: absolute;
   bottom: 0;
-  width: 75%;
+  width: 72%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@
 @media screen and (max-width: 902px){
   .courses-container{
     grid-template-columns: 1fr;
-    width: 80%;
+    width: 100%;
     gap: 0px;
   }
   .sidebar button{
@@ -53,6 +53,9 @@
     flex-direction: column;
     width: 100%;
     gap: 0px;
+  }
+  .card button{
+    width: 77%;
   }
 }
 

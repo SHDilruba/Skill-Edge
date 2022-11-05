@@ -15,10 +15,10 @@ import Fade from 'react-bootstrap/Fade';
     const [open, setOpen] = useState(false);
 
     return (
-      <div>
-      <Navbar className='py-1 cover-area' collapseOnSelect expand="lg" bg="light"  variant="light">
+      <div className='cover-area'>
+      <Navbar className='py-1' collapseOnSelect expand="lg" bg="light"  variant="light">
         <Container>
-          <div>
+          <div className='site-title'>
           <img id='logo' src={logo} alt="" />
           <Navbar.Brand className='title fs-3'>Skill Edge</Navbar.Brand>
           </div>
@@ -33,7 +33,7 @@ import Fade from 'react-bootstrap/Fade';
             <Nav>
             <NavLink className="menu" to='/Login'>
               { user ? 
-               <div className='d-flex mt-2'>
+               <div className='profile mt-2'>
                    <div className='me-2' onMouseOver={() => setOpen(!open)}
                     aria-controls="example"
                     aria-expanded={open}>

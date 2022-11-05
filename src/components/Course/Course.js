@@ -11,7 +11,7 @@ const Course = ({course}) => {
 
   return (
     <div className='card w-100'>
-         <img src={picture} alt="" />
+         <img className='img-fluid' src={picture} alt="" />
          <h5 className='mt-4 px-1'>{name}</h5>
          <button onClick={handleNavigate} className='btn btn-primary my-4'>Details</button>
     </div>

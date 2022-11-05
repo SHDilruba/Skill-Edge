@@ -4,6 +4,7 @@ import { Link, navigate, useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import app from '../../firebase/firebase.config';
+import './Login.css'
 
 const auth = getAuth(app);
 
@@ -98,8 +99,8 @@ const githubProvider = new GithubAuthProvider();
 
   return (
     <div className='container'>             
-    <div className='container bg-light rounded p-5 my-5 w-50 pb-5'>
-      <h3 className='text-primary mb-5'> Log in with Email</h3>
+    <div className='login-container container'>
+      <h3 className='text-primary mb-5 pt-5'> Log in with Email</h3>
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">Email</label>

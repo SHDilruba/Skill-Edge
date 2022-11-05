@@ -1,0 +1,18 @@
+.login-container{
+  width: 60%;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  padding: 40px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 902px){
+  .login-container{
+    width: 80%;
+    margin-top: 40px;
+    padding: 20px;
+  }
+}
+
+
