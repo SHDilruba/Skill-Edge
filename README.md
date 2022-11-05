@@ -1,8 +1,7 @@
 ## Website name: 
 ## Skill Edge 
 
-## Live link: 
-
+## Live link: https://skill-edge-121c4.web.app
 
 ## Features:
 + This website specializes in learning about technology like React, Javascript, digital marketing, CSS graphic design etc.

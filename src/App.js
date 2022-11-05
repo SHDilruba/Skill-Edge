@@ -1,5 +1,4 @@
 import React from 'react'
-// import ReactDOM from 'react-dom'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
@@ -34,35 +33,35 @@ function App() {
         {
           path: '/courses',
           loader: async() =>{
-            return  fetch('http://localhost:5000/courses')
+            return  fetch('https://skill-edge-server-sigma.vercel.app/courses')
           },
           element: <Courses></Courses>
         },
         {
           path: '/course',
           loader: async() =>{
-            return fetch('http://localhost:5000/courses')
+            return fetch('https://skill-edge-server-sigma.vercel.app/courses/')
           },
           element: <Course></Course>
         },
         {
           path: '/course',
           loader: async({params}) =>{
-            return fetch(`http://localhost:5000/courses/${params.courseId}`)
+            return fetch(`https://skill-edge-server-sigma.vercel.app/courses/${params.courseId}`)
           },
           element: <Sidebar></Sidebar>
         },
         {
           path: '/course/:courseId',
           loader: async({params}) =>{
-            return fetch(`http://localhost:5000/courses/${params.courseId}`)
+            return fetch(`https://skill-edge-server-sigma.vercel.app/courses/${params.courseId}`)
           },
           element: <CourseDetail></CourseDetail>
         },
         {
           path: '/detail/:detailId',
           loader: async({params}) =>{
-            return fetch(`http://localhost:5000/courses/${params.detailId}`)
+            return fetch(`https://skill-edge-server-sigma.vercel.app/courses/${params.detailId}`)
           },
           element: <PrivateRoute><Checkout></Checkout></PrivateRoute>
         },
