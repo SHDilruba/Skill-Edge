@@ -12,7 +12,7 @@
 }
 
 .course-detail img{
-   height: 350px;
+   height: 420px;
    width: 75%;
    margin-top: 15px;
 }
@@ -22,25 +22,16 @@
 
 @media screen and ( max-width: 902px){
   .course-detail{
-     margin: 0;
-     padding: 0;
-     width: 100%;
-  }
-  .course-detail p{
-     margin: 0;
-     padding: 0;
-  }
-  .course-detail{
    width: 100%;
   }
-  .course-detail img{
+   .course-detail img{
     width: 100%;
   }
- #premium-btn button{
-   width: 80%;
-}
 .title{
    flex-direction: column;
+}
+.button-area{
+   margin-right: 10%;
 }
 }
   

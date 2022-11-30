@@ -99,8 +99,8 @@ const githubProvider = new GithubAuthProvider();
 
   return (
     <div className='container'>             
-    <div className='login-container container'>
-      <h3 className='text-primary mb-5 pt-5'> Log in with Email</h3>
+    <div className='login-container container pb-5'>
+      <h3 className='text-primary mb-4 pt-5'> Log in with Email</h3>
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="formGroupExampleInput" className="form-label">Email</label>
@@ -111,17 +111,16 @@ const githubProvider = new GithubAuthProvider();
                 <input type="password" name="password" className="form-control" id="formGroupExampleInput2" placeholder="Your password" required />
              <div className='text-danger'>{error}</div>
             </div>
-            <button className="btn btn-primary w-50 mt-3" type="submit">Login</button>
+            <button className="login-btn btn btn-primary mt-3" type="submit">Login</button>
         </form> 
                {success && alert('Succesfully loged in to the account')}
           <div className='mt-5'>
-              <button className='w-50 py-2 btn btn-dark' onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
-              <button className='w-50 py-2 btn btn-dark mb-5' onClick={handleGithubSignIn}> Log In with Github</button> 
+              <button className='other-login-btn py-2 btn btn-dark' onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
+              <button className='other-login-btn py-2 btn btn-dark mb-5' onClick={handleGithubSignIn}> Log In with Github</button> 
         </div>
         <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         <p><small>Forget password? <button onClick={handleForgetPassword} type="button" className="btn btn-link">Reset Password</button></small> </p>
     </div>
-    {/* }; */}
   </div>
   );
 };

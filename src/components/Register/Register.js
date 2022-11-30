@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { useContext } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import './Register.css';
 
 const Register = () => { 
 
@@ -21,6 +22,21 @@ const Register = () => {
       const photoURL = form.photoURL.value;
       const email = form.email.value;
       const password = form.password.value;
+
+      
+      if(!/(?=.*[A-Z].*[A-Z])/.test(password)){
+        setError('please provide at least two uppercase');
+          return;
+      }
+       if(password.length < 6){
+        setError('please should be at least 6 characters');
+        return;
+       }
+       if(!/(?=.*[!@#$&*])/.test(password)){
+        setError('please add at least one special character');
+       return;
+       }
+       setError('');
 
     createUser( email, password)
       .then( result => {
@@ -45,23 +61,10 @@ const Register = () => {
          .catch(error => console.error(error));
      }
 
-      if(!/(?=.*[A-Z].*[A-Z])/.test(password)){
-        setError('please provide at least two uppercase');
-          return;
-      }
-       if(password.length < 6){
-        setError('please should be at least 6 characters');
-        return;
-       }
-       if(!/(?=.*[!@#$&*])/.test(password)){
-        setError('please add at least one special character');
-       return;
-       }
-       setError('');
     }
 
   return (
-    <div className='w-50 mx-auto bg-light px-5 py-5 mt-5 mb-5 rounded'>
+    <div className='register-container mx-auto bg-light px-5 py-5 mt-5 mb-5'>
       <h2 className='text-primary mb-5 mt-3'>Please Register</h2>
     <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="formBasicName">
@@ -89,7 +92,7 @@ const Register = () => {
 
       <p className='text-danger mt-4'>{error}</p>
       {success && <p className='text-success'>User created sucessfully</p>}
-      <Button className='w-50 my-4' variant="primary" type="submit">
+      <Button className='submit-btn my-4' variant="primary" type="submit">
         Submit
       </Button>
     </Form>

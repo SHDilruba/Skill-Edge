@@ -10,7 +10,7 @@ const Courses = () => {
 
   return (
         <div className=' courses-container container mt-5 pt-5 '>
-        <div className=' sidebar'>
+        <div className=' sidebar bg-light px-3 pt-5 rounded'>
         <h4 className='mb-4 text-primary'> Available Courses: {courses.length}</h4>
          <div>
             {

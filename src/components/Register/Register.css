@@ -1,0 +1,16 @@
+.register-container{
+    width: 50%;
+    border-radius: 20px;
+}
+.submit-btn{
+  width: 30%;
+}
+
+@media screen and (max-width: 902px) {
+  .register-container{
+    width: 80%;
+} 
+.submit-btn{
+  width: 50%;
+}
+}

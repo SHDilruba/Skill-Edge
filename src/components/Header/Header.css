@@ -11,6 +11,11 @@
 .menu:hover{
    color: rgb(148, 22, 22);
 }
+
+.login-btn{
+  color: rgb(148, 22, 22);
+}
+
 .title{
   color: rgb(148, 22, 22);
 }

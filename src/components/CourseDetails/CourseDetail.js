@@ -29,7 +29,7 @@ const pdfExportComponent = useRef
     <div className='course-detail container mt-5 mb-5 pb-5'>
            <div>
               <div className="title mb-4">
-                 <h1> <small className='text-dark'>COURSE:</small> {name}</h1>
+                 <h2> <small className='text-primary'>COURSE:</small> {name}</h2>
           <div className='button-area'>
                  <button onClick={handleExportWithComponent} className='btn btn-dark ms-5 text-light'> PDF</button>
           </div>

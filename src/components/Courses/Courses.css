@@ -40,6 +40,10 @@
 }
 
 @media screen and (max-width: 902px){
+body{
+  width: 100%;
+}
+
   .courses-container{
     grid-template-columns: 1fr;
     width: 100%;
