@@ -6,12 +6,6 @@
   margin-top: 70px;
   margin-bottom: 50px;
 }
-.login-btn{
-  width: 30%;
-}
-.other-login-btn{
-   width: 50%;  
-}
 
 @media screen and (max-width: 902px){
   .login-container{

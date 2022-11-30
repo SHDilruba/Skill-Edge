@@ -111,12 +111,12 @@ const githubProvider = new GithubAuthProvider();
                 <input type="password" name="password" className="form-control" id="formGroupExampleInput2" placeholder="Your password" required />
              <div className='text-danger'>{error}</div>
             </div>
-            <button className="login-btn btn btn-primary mt-3" type="submit">Login</button>
+            <button className="login-btn btn btn-primary mt-3 text-light w-50" type="submit">Login</button>
         </form> 
                {success && alert('Succesfully loged in to the account')}
           <div className='mt-5'>
-              <button className='other-login-btn py-2 btn btn-dark' onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
-              <button className='other-login-btn py-2 btn btn-dark mb-5' onClick={handleGithubSignIn}> Log In with Github</button> 
+              <button className='other-login-btn py-2 btn btn-dark w-50' onClick={handleGoogleSignIn}>Log In with Google</button> <br /><br />
+              <button className='other-login-btn py-2 btn btn-dark mb-5 w-50' onClick={handleGithubSignIn}> Log In with Github</button> 
         </div>
         <p><small>New to this website? Please <Link to='/register'>Register</Link></small></p>
         <p><small>Forget password? <button onClick={handleForgetPassword} type="button" className="btn btn-link">Reset Password</button></small> </p>
