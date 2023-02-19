@@ -7,6 +7,6 @@
 
 + This website was created with dynamic components by using, react app, own server site, routers, firebase authentication, Bootstrap etc.
 
-+ There was created a checkout page with private router.
++ There was created a checkout page with private route.
 
 + There was also created a blog page about React that has four short articles that answer four questions.
